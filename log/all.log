@@ -1,0 +1,1564 @@
+2017-03-17 14:10:08,425 [Dummy-1:9084] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-03-17 14:10:08,441 [Dummy-1:9084] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-03-17 14:10:08,441 [Dummy-1:9084] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-03-17 14:10:08,441 [Dummy-1:9084] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-03-17 14:10:08,441 [Dummy-1:9084] [django.db.backends.schema:101] [schema:execute] [DEBUG]- CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); (params None)
+2017-03-17 14:10:08,441 [Dummy-1:9084] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); args=None
+2017-03-17 14:10:08,625 [Dummy-1:9084] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-03-17 14:10:08,640 [Dummy-1:9084] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-03-17 14:10:10,861 [Thread-2:1376] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-17 14:10:11,158 [Thread-3:1016] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-17 14:10:15,878 [Thread-5:5060] [scantool.views:16] [views:webscan] [ERROR]- 'NoneType' object has no attribute 'startswith'
+2017-03-17 14:10:15,920 [Thread-5:5060] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'cmscan.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'True': True, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001CCE2A2BF28>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001CCE2A46A90>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001CCE2A6CD08>>, 'request': <WSGIRequest: GET '/webscan/'>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'ERROR': 40, 'INFO': 20, 'WARNING': 30, 'DEBUG': 10}}, {}, {'request': <WSGIRequest: GET '/webscan/'>, 'url': None}, {}]"
+2017-03-17 14:12:07,258 [Dummy-1:4848] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:12:07,374 [Dummy-1:4848] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:12:07,636 [Dummy-1:4848] [django.db.backends:89] [utils:execute] [DEBUG]- (0.262) SHOW FULL TABLES; args=None
+2017-03-17 14:12:07,706 [Dummy-1:4848] [django.db.backends:89] [utils:execute] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:16:13,438 [Thread-2:1624] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-17 14:17:00,474 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:17:00,591 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:17:00,593 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 14:17:00,598 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:17:25,290 [Dummy-1:2276] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:17:25,414 [Dummy-1:2276] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:17:25,415 [Dummy-1:2276] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 14:17:25,419 [Dummy-1:2276] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:17:25,863 [Thread-2:10524] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern search ^search/$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-17 14:17:29,801 [Thread-4:4520] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000027CA1B6C4E0>, 'request': <WSGIRequest: GET '/search/'>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'ERROR': 40, 'INFO': 20, 'DEBUG': 10, 'WARNING': 30}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000027CA1B67F28>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000027CA1B95B70>>}, {}, {}]"
+2017-03-17 14:19:01,136 [Thread-5:9320] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000027CA1B6CC18>, 'request': <WSGIRequest: GET '/search/'>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'ERROR': 40, 'INFO': 20, 'DEBUG': 10, 'WARNING': 30}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000027CA1B672E8>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000027CA1B95D90>>}, {}, {}]"
+2017-03-17 14:19:14,822 [Thread-6:3016] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000027CA1B77898>, 'request': <WSGIRequest: GET '/search/'>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'ERROR': 40, 'INFO': 20, 'DEBUG': 10, 'WARNING': 30}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000027CA1B6CDA0>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000027CA1BABEA0>>}, {}, {}]"
+2017-03-17 14:20:29,867 [Dummy-1:1632] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:20:29,970 [Dummy-1:1632] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:20:29,970 [Dummy-1:1632] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:20:29,985 [Dummy-1:1632] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:20:35,016 [Thread-2:3144] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'False': False, 'None': None}, {'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001D4026246A8>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'request': <WSGIRequest: POST '/search/'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D4029D4E80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'ERROR': 40, 'WARNING': 30, 'SUCCESS': 25}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D4029B5CF8>}, {}, {}]"
+2017-03-17 14:20:44,532 [Thread-3:10424] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'False': False, 'None': None}, {'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001D4029C71E0>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'request': <WSGIRequest: POST '/search/'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D4029E2D30>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'ERROR': 40, 'WARNING': 30, 'SUCCESS': 25}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D4029D44E0>}, {}, {}]"
+2017-03-17 14:20:52,851 [Thread-4:10208] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'False': False, 'None': None}, {'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001D4029FC730>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'request': <WSGIRequest: POST '/search/'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D4029E26D8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'ERROR': 40, 'WARNING': 30, 'SUCCESS': 25}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D4029E2668>}, {}, {}]"
+2017-03-17 14:22:32,912 [Dummy-1:7944] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:22:33,026 [Dummy-1:7944] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:22:33,028 [Dummy-1:7944] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 14:22:33,032 [Dummy-1:7944] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:22:34,882 [Thread-2:3184] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002CE48C64CF8>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002CE488F70D0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002CE48C84EF0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'WARNING': 30, 'INFO': 20, 'SUCCESS': 25, 'ERROR': 40}}, {}, {}]"
+2017-03-17 14:23:55,148 [Dummy-1:12088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:23:55,255 [Dummy-1:12088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:23:55,255 [Dummy-1:12088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:23:55,259 [Dummy-1:12088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:24:05,317 [Dummy-1:12216] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:24:05,422 [Dummy-1:12216] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:24:05,424 [Dummy-1:12216] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 14:24:05,428 [Dummy-1:12216] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:24:16,651 [Dummy-1:7416] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:24:16,750 [Dummy-1:7416] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:24:16,766 [Dummy-1:7416] [django.db.backends:89] [utils:execute] [DEBUG]- (0.016) SHOW FULL TABLES; args=None
+2017-03-17 14:24:16,771 [Dummy-1:7416] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:24:54,359 [Dummy-1:11976] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:24:54,459 [Dummy-1:11976] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:24:54,459 [Dummy-1:11976] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:24:54,475 [Dummy-1:11976] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:25:49,184 [Dummy-1:4520] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:25:49,284 [Dummy-1:4520] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:25:49,284 [Dummy-1:4520] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:25:49,284 [Dummy-1:4520] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:26:14,600 [Thread-3:1212] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D5FBBCAEF0>, 'request': <WSGIRequest: GET '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D5FBB527F0>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001D5FB8172F0>>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'INFO': 20, 'ERROR': 40, 'DEBUG': 10, 'WARNING': 30}}, {}, {}]"
+2017-03-17 14:26:16,751 [Thread-4:11408] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D5FBBD75F8>, 'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D5FBBCA550>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001D5FBBB40D0>>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'INFO': 20, 'ERROR': 40, 'DEBUG': 10, 'WARNING': 30}}, {}, {}]"
+2017-03-17 14:26:39,545 [Dummy-1:9044] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:26:39,657 [Dummy-1:9044] [django.db.backends:89] [utils:execute] [DEBUG]- (0.004) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:26:39,657 [Dummy-1:9044] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:26:39,661 [Dummy-1:9044] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:26:41,776 [Thread-2:6392] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'True': True, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001DB02CC5EF0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001DB02CA5D68>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'WARNING': 30, 'DEBUG': 10, 'ERROR': 40, 'INFO': 20}, 'request': <WSGIRequest: POST '/search/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001DB02908488>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>}, {}, {}]"
+2017-03-17 14:26:55,401 [Thread-3:8168] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'True': True, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001DB02CD36D8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001DB02CC54E0>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'WARNING': 30, 'DEBUG': 10, 'ERROR': 40, 'INFO': 20}, 'request': <WSGIRequest: POST '/search/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001DB02CB5268>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>}, {}, {}]"
+2017-03-17 14:28:50,676 [Dummy-1:11808] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:28:50,794 [Dummy-1:11808] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:28:50,796 [Dummy-1:11808] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 14:28:50,800 [Dummy-1:11808] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:29:10,673 [Thread-2:6532] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000221F32A7048>>, 'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x00000221F3656D30>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00000221F3675EB8>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'WARNING': 30, 'SUCCESS': 25, 'INFO': 20, 'DEBUG': 10}}, {}, {}]"
+2017-03-17 14:29:38,830 [Dummy-1:5128] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:29:38,931 [Dummy-1:5128] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:29:38,931 [Dummy-1:5128] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:29:38,931 [Dummy-1:5128] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:29:41,848 [Thread-2:12100] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'False': False, 'True': True}, {'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000016620878950>>, 'DEFAULT_MESSAGE_LEVELS': {'INFO': 20, 'ERROR': 40, 'WARNING': 30, 'SUCCESS': 25, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000016620BE7D68>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'request': <WSGIRequest: POST '/search/'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000016620C06EF0>}, {}, {}]"
+2017-03-17 14:30:15,170 [Dummy-1:6296] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:30:15,277 [Dummy-1:6296] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:30:15,277 [Dummy-1:6296] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:30:15,277 [Dummy-1:6296] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:30:17,832 [Thread-2:424] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A483BC5EB8>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A483BA8D30>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A4838092F0>>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'DEBUG': 10, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20}}, {}, {}]"
+2017-03-17 14:30:46,151 [Dummy-1:2220] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:30:46,270 [Dummy-1:2220] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:30:46,270 [Dummy-1:2220] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:30:46,270 [Dummy-1:2220] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:30:55,089 [Thread-2:8200] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'False': False, 'None': None}, {'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000012ABBE8E400>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000012ABC285EF0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000012ABC264DA0>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'INFO': 20, 'DEBUG': 10, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'request': <WSGIRequest: POST '/search/'>}, {}, {}]"
+2017-03-17 14:41:49,294 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:41:49,405 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:41:49,409 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
+2017-03-17 14:41:49,409 [Dummy-1:3184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:42:01,786 [Thread-2:12276] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'False': False, 'True': True, 'None': None}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002D10BF66C80>>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002D10C2D7D68>, 'request': <WSGIRequest: POST '/search/'>, 'DEFAULT_MESSAGE_LEVELS': {'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10, 'WARNING': 30}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002D10C2F5F28>}, {}, {}]"
+2017-03-17 14:42:57,207 [Dummy-1:9840] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:42:57,335 [Dummy-1:9840] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:42:57,337 [Dummy-1:9840] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 14:42:57,343 [Dummy-1:9840] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:43:02,999 [Thread-2:6176] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001E2F3804F98>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'ERROR': 40, 'WARNING': 30, 'DEBUG': 10, 'INFO': 20}, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001E2F34570D0>>, 'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001E2F37E7DD8>}, {}, {}]"
+2017-03-17 14:43:06,193 [Thread-3:10556] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001E2F3813E10>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'ERROR': 40, 'WARNING': 30, 'DEBUG': 10, 'INFO': 20}, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001E2F37F5268>>, 'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001E2F38048D0>}, {}, {}]"
+2017-03-17 14:43:32,709 [Dummy-1:9964] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:43:32,830 [Dummy-1:9964] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:43:32,831 [Dummy-1:9964] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 14:43:32,836 [Dummy-1:9964] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:43:35,564 [Thread-2:10576] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'False': False, 'True': True}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001C4A2986D30>, 'DEFAULT_MESSAGE_LEVELS': {'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10, 'WARNING': 30}, 'request': <WSGIRequest: POST '/search/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001C4A25F7048>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001C4A29A3F28>}, {}, {}]"
+2017-03-17 14:44:55,510 [Dummy-1:6344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:44:55,615 [Dummy-1:6344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:44:55,615 [Dummy-1:6344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:44:55,631 [Dummy-1:6344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:45:06,638 [Thread-2:8248] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'False': False, 'True': True}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002D9B02680D0>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'WARNING': 30, 'ERROR': 40, 'SUCCESS': 25, 'INFO': 20}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002D9B05D5D30>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002D9B05F5EF0>, 'request': <WSGIRequest: POST '/search/'>}, {}, {}]"
+2017-03-17 14:46:06,576 [Dummy-1:11680] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:46:06,691 [Dummy-1:11680] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:46:06,693 [Dummy-1:11680] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 14:46:06,697 [Dummy-1:11680] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:46:16,867 [Thread-2:4520] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'DEBUG': 10, 'WARNING': 30, 'SUCCESS': 25, 'INFO': 20}, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000025DF5EF8048>>, 'request': <WSGIRequest: POST '/search/'>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000025DF62B5EF0>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000025DF6297CF8>}, {}, {}]"
+2017-03-17 14:51:54,758 [Dummy-1:9664] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:52:22,901 [Dummy-1:11816] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:52:23,012 [Dummy-1:11816] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:52:23,012 [Dummy-1:11816] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:52:23,016 [Dummy-1:11816] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:52:32,027 [Thread-2:1200] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001B026E24DA0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001B026E43F60>, 'request': <WSGIRequest: POST '/search/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001B026AC0D08>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>}, {}, {}]"
+2017-03-17 14:52:46,834 [Dummy-1:2492] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:52:46,932 [Dummy-1:2492] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:52:46,932 [Dummy-1:2492] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:52:46,932 [Dummy-1:2492] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:52:54,574 [Thread-2:1228] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'False': False, 'True': True, 'None': None}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000027EAA275F60>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000027EAA258D68>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000027EA9EC0D08>>, 'request': <WSGIRequest: POST '/search/'>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'ERROR': 40, 'DEBUG': 10}}, {}, {}]"
+2017-03-17 14:53:38,603 [Dummy-1:10744] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:53:38,704 [Dummy-1:10744] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:53:38,704 [Dummy-1:10744] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:53:38,719 [Dummy-1:10744] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:53:44,746 [Thread-2:1404] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'False': False, 'True': True}, {'request': <WSGIRequest: POST '/search/'>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'ERROR': 40, 'SUCCESS': 25, 'INFO': 20, 'WARNING': 30}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001CC06843F98>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001CC06825DA0>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001CC064A7510>>}, {}, {}]"
+2017-03-17 14:55:53,553 [Dummy-1:11316] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:55:53,711 [Dummy-1:11316] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:55:53,714 [Dummy-1:11316] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 14:55:53,718 [Dummy-1:11316] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:57:01,142 [Dummy-1:7340] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:57:01,261 [Dummy-1:7340] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:57:01,262 [Dummy-1:7340] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 14:57:01,267 [Dummy-1:7340] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:57:04,597 [Thread-2:10916] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'None': None, 'False': False, 'True': True}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x00000213B6767E10>, 'request': <WSGIRequest: POST '/search/'>, 'DEFAULT_MESSAGE_LEVELS': {'INFO': 20, 'SUCCESS': 25, 'DEBUG': 10, 'WARNING': 30, 'ERROR': 40}, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000213B63B89D8>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00000213B67905C0>}, {}, {}]"
+2017-03-17 14:57:38,842 [Dummy-1:11580] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:57:38,957 [Dummy-1:11580] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:57:38,957 [Dummy-1:11580] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:57:38,957 [Dummy-1:11580] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:57:42,211 [Thread-2:2492] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'information' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'information'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [information] in "[{'True': True, 'None': None, 'False': False}, {'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'ERROR': 40, 'SUCCESS': 25, 'DEBUG': 10, 'INFO': 20}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000020CBAA235C0>, 'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000020CBA9F8E10>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000020CBA695598>>}, {}, {}]"
+2017-03-17 14:58:30,483 [Dummy-1:7260] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:58:30,594 [Dummy-1:7260] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:58:30,595 [Dummy-1:7260] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 14:58:30,599 [Dummy-1:7260] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:58:31,409 [Thread-2:604] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'result' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [result] in "[{'False': False, 'True': True, 'None': None}, {'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x00000122C2726E48>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000122C239ED08>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00000122C27545F8>}, {}, {}]"
+2017-03-17 14:58:39,874 [Thread-3:10112] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'result' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [result] in "[{'False': False, 'True': True, 'None': None}, {'request': <WSGIRequest: POST '/search/'>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x00000122C2744438>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000122C2736268>>, 'csrf_token': <SimpleLazyObject: 'NIPjaN0RS8A3SHYAyWqtUOT712RQ8gOE'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00000122C2760550>}, {}, {}]"
+2017-03-17 14:58:54,580 [Dummy-1:6232] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:58:54,714 [Dummy-1:6232] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:58:54,714 [Dummy-1:6232] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 14:58:54,721 [Dummy-1:6232] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 14:59:56,620 [Dummy-1:5624] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:59:56,730 [Dummy-1:5624] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 14:59:56,731 [Dummy-1:5624] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 14:59:56,734 [Dummy-1:5624] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:00:58,266 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:00:58,366 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:00:58,366 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 15:00:58,381 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:04:08,849 [Dummy-1:11300] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:04:08,950 [Dummy-1:11300] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:04:08,950 [Dummy-1:11300] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 15:04:08,967 [Dummy-1:11300] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:12:51,086 [Dummy-1:11896] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:12:51,199 [Dummy-1:11896] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:12:51,200 [Dummy-1:11896] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 15:12:51,205 [Dummy-1:11896] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:13:14,966 [Dummy-1:8244] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:13:15,077 [Dummy-1:8244] [django.db.backends:89] [utils:execute] [DEBUG]- (0.004) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:13:15,078 [Dummy-1:8244] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 15:13:15,083 [Dummy-1:8244] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:13:41,216 [Dummy-1:8088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:13:41,330 [Dummy-1:8088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:13:41,333 [Dummy-1:8088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 15:13:41,338 [Dummy-1:8088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:42:46,642 [Dummy-1:9444] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:42:46,757 [Dummy-1:9444] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:42:46,757 [Dummy-1:9444] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 15:42:46,757 [Dummy-1:9444] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:43:35,597 [Dummy-1:5068] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:43:35,697 [Dummy-1:5068] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:43:35,697 [Dummy-1:5068] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 15:43:35,697 [Dummy-1:5068] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:43:45,728 [Dummy-1:4020] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:43:45,847 [Dummy-1:4020] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:43:45,849 [Dummy-1:4020] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 15:43:45,854 [Dummy-1:4020] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:48:13,990 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'url' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [url] in 'n'
+2017-03-17 15:48:13,991 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'header' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [header] in 'n'
+2017-03-17 15:48:13,991 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'url' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [url] in 'o'
+2017-03-17 15:48:13,992 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'header' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [header] in 'o'
+2017-03-17 15:48:13,995 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'url' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [url] in 'n'
+2017-03-17 15:48:13,996 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'header' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [header] in 'n'
+2017-03-17 15:48:13,997 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'url' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [url] in 'e'
+2017-03-17 15:48:13,998 [Thread-9:9196] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'header' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'str' object has no attribute 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [header] in 'e'
+2017-03-17 15:55:30,399 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:55:30,499 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:55:30,515 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 15:55:30,515 [Dummy-1:8772] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:55:32,287 [Thread-2:11788] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern search ^search/$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-17 15:55:32,478 [Thread-3:8548] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern search ^search/$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-17 15:55:39,455 [Thread-4:11708] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'searcj', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern search ^search/$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-17 15:55:42,166 [Thread-6:912] [scantool.views:50] [views:search] [ERROR]- 'NoneType' object has no attribute 'replace'
+2017-03-17 15:55:42,171 [Thread-6:912] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'result' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [result] in "[{'True': True, 'None': None, 'False': False}, {'csrf_token': <SimpleLazyObject: 'Q8eyuiZRXCNDP7OYan31riGC6to1Jsir'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001533D3A7EA0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001533D382DA0>, 'request': <WSGIRequest: GET '/search/'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'INFO': 20, 'WARNING': 30, 'DEBUG': 10, 'SUCCESS': 25}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001533D37CEB8>}, {}, {'request': <WSGIRequest: GET '/search/'>, 'search': None}, {}]"
+2017-03-17 15:57:09,283 [Dummy-1:1460] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:57:09,383 [Dummy-1:1460] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:57:09,383 [Dummy-1:1460] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2017-03-17 15:57:09,383 [Dummy-1:1460] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:57:42,500 [Dummy-1:12000] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:57:42,612 [Dummy-1:12000] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:57:42,613 [Dummy-1:12000] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 15:57:42,618 [Dummy-1:12000] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 15:57:55,011 [Dummy-1:11596] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:57:55,115 [Dummy-1:11596] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 15:57:55,117 [Dummy-1:11596] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-03-17 15:57:55,118 [Dummy-1:11596] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 16:18:46,471 [Thread-4:7348] [scantool.views:49] [views:search] [ERROR]- 'NoneType' object has no attribute 'replace'
+2017-03-17 16:18:46,473 [Thread-4:7348] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'result' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [result] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021CF0CBD358>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000021CF0CC9730>>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021CF0CB3898>, 'request': <WSGIRequest: GET '/search/'>, 'csrf_token': <SimpleLazyObject: 'Q8eyuiZRXCNDP7OYan31riGC6to1Jsir'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'INFO': 20, 'DEBUG': 10, 'WARNING': 30}}, {}, {'request': <WSGIRequest: GET '/search/'>, 'search': None}, {}]"
+2017-03-17 16:21:13,545 [Thread-9:12000] [scantool.views:49] [views:search] [ERROR]- 'NoneType' object has no attribute 'replace'
+2017-03-17 16:21:13,545 [Thread-9:12000] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'result' in template 'search.html'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [result] in "[{'True': True, 'None': None, 'False': False}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021CF0D08898>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000021CF0CEC9D8>>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021CF0CBD5C0>, 'request': <WSGIRequest: GET '/search/'>, 'csrf_token': <SimpleLazyObject: 'dtmtGFLgXRIhaGepzPZLF9c86DtGTUFO'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'INFO': 20, 'DEBUG': 10, 'WARNING': 30}}, {}, {'request': <WSGIRequest: GET '/search/'>, 'search': None}, {}]"
+2017-03-17 16:21:16,679 [Thread-11:1376] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern webscan ^webscan/$>], [<RegexURLResolver <module 'scantool.urls' from 'C:\\django_test\\Scripts\\webscan\\scantool\\urls.py'> (None:None) >, <RegexURLPattern search ^search/$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'

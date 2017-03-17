@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <title>web指纹识别</title>
+</head>
+<body style="background-image:url({% static 'images/background.png' %})">
+
+
+<div id="mainbody">
+  <div style="margin-top:180px;">
+    <div class="container">
+        <form class="form-inline text-center" action="/search/" method="POST" onsubmit="GetInfo();return false;">
+        <div class="form-group">
+            {% csrf_token %}
+            <label class="control-label" for="inputurls">search</label>
+          <input type="text" class="input-lg form-control" value="" id="search" name="search">
+          <button type="submit" class="btn btn-lg btn-danger">搜索</button><br><br>
+            </div>
+<table width="426" height="84" cellspacing="1" cellpadding="0" border="0" bgcolor="#5C87B2" align="center" id="table3">
+  <tbody>
+
+    <tr bgcolor="#FFFFFF">
+          {%  for i in result %}
+        <p style="color:lawngreen;font-size:16px;">ip :      {{ i.url }}</p><br>
+              <p style="color:greenyellow;font-size:16px;">title :      {{ i.title }}</p><br>
+              <p style="color:limegreen;font-size:16px;">header :      {{ i.header }}</p><br>
+        {% endfor %}
+    </tr>
+
+  </tbody>
+</body>
+</html>

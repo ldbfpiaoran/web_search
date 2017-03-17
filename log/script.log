@@ -1,0 +1,8 @@
+2017-03-17 14:10:10,857 [Thread-2:1376] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 14:10:11,154 [Thread-3:1016] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-17 14:16:13,435 [Thread-2:1624] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 14:17:25,860 [Thread-2:10524] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 15:55:32,284 [Thread-2:11788] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 15:55:32,476 [Thread-3:8548] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-17 15:55:39,455 [Thread-4:11708] [django.request:182] [base:get_response] [WARNING]- Not Found: /searcj
+2017-03-17 16:21:16,679 [Thread-11:1376] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico

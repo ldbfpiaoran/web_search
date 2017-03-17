@@ -1,0 +1,4 @@
+2017-03-17 14:10:15,878 [Thread-5:5060] [scantool.views:16] [views:webscan] [ERROR]- 'NoneType' object has no attribute 'startswith'
+2017-03-17 15:55:42,166 [Thread-6:912] [scantool.views:50] [views:search] [ERROR]- 'NoneType' object has no attribute 'replace'
+2017-03-17 16:18:46,471 [Thread-4:7348] [scantool.views:49] [views:search] [ERROR]- 'NoneType' object has no attribute 'replace'
+2017-03-17 16:21:13,545 [Thread-9:12000] [scantool.views:49] [views:search] [ERROR]- 'NoneType' object has no attribute 'replace'
