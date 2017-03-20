@@ -34,6 +34,7 @@ def get_host_informathion(url):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 UBrowser/6.0.1471.914 Safari/537.36'}
     try:
         response = requests.get(url=url, headers=headers,timeout=5)
+        resopnse.encoding = response.apparent_encoding 
         head = response.headers
         header = ''
         for key in head.keys():  # 将 header集合
