@@ -6,7 +6,7 @@ import scantool.tool.rule
 import pymysql
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 from scantool.models import *
-
+from django.db.models import Q
 logger = logging.getLogger('scantool.views')
 
 
@@ -27,14 +27,25 @@ def webscan(request):
 def search(request):
     try:
         search = request.GET.get('search')
+        tp = request.GET.get('type')
+        print(tp)
         if search :
             search = search.replace(' ','')
-            result_list = httpdata.objects.filter(ip__contains=search)
+            if tp == 'title':
+                result_list = httpdata.objects.filter(title__contains=search)
+            elif tp == 'ip':
+                result_list = httpdata.objects.filter(ip__contains=search)
+            elif tp == 'header':
+                result_list = httpdata.objects.filter(header__contains=search)
+            else:
+                result_list = ['你是傻逼么']
         result_list = getPage(request,result_list)
     except Exception as e:
         print(e)
         logger.error(e)
     return render(request,'search.html',locals())
+
+
 
 
 
