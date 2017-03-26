@@ -25,7 +25,7 @@
 
     <tr bgcolor="#FFFFFF">
           {%  for i in result_list %}
-        <p style="color:lawngreen;font-size:16px;">ip :      {{ i.ip }}</p><br>
+        <p style="color:lawngreen;font-size:16px;">ip :   <a href="{{ i.ip }}" target="view_window">{{ i.ip }}</a>   </p><br>
               <p style="color:greenyellow;font-size:16px;">title :      {{ i.title }}</p><br>
               <p style="color:limegreen;font-size:16px;">header :      {{ i.header }}</p><br>
         {% endfor %}
