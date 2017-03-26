@@ -14,4 +14,6 @@
     http://127.0.0.1/search/ 为web搜索
     hostscan下hostscan.py搜索web指纹并录入数据库中
     未完成:web指纹和web搜索结合
-
+# 2017.03.26
+----
+更新了查询分页显示  修改了data数据库  用于django自带生成方法
