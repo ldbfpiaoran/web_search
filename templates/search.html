@@ -17,6 +17,11 @@
         <div class="form-group">
             {% csrf_token %}
             <label class="control-label" for="inputurls" style="color:red;font-size:16px;">search</label>
+            <select name="type">
+<option value="ip">ip搜索</option>
+<option value="title">title搜索</option>
+<option value="header">header搜索</option>
+</select>
           <input type="text" class="input-lg form-control" value="" id="search" name="search">
           <button type="submit" class="btn btn-lg btn-danger">搜索</button><br><br>
             </div>
@@ -34,13 +39,13 @@
     <ul id="pagination-flickr">
     {% csrf_token %}
     {% if result_list.has_previous %}
-    <li class="previous"><a href="?page={{ result_list.previous_page_number }}&search={{ search }}" style="color:red;font-size:16px;">&laquo;上一页</a></li>
+    <li class="previous"><a href="?page={{ result_list.previous_page_number }}&search={{ search }}&type={{ tp }}" style="color:red;font-size:16px;">&laquo;上一页</a></li>
     {% else %}
     <li class="previous-off" style="color:red;font-size:16px;">&laquo;上一页</li>
     {% endif %}
      <li class="active" style="color:red;font-size:16px;">{{ result_list.number }}/{{ result_list.paginator.num_pages }}</li>
     {% if result_list.has_next %}
-      <li class="next"><a href="?page={{ result_list.next_page_number }}&search={{ search }}" style="color:red;font-size:16px;">下一页 &raquo;</a></li>
+      <li class="next"><a href="?page={{ result_list.next_page_number }}&search={{ search }}&type={{ tp }}" style="color:red;font-size:16px;">下一页 &raquo;</a></li>
     {% else %}
       <li class="next-off" style="color:red;font-size:16px;">下一页 &raquo;</li>
     {% endif %}
