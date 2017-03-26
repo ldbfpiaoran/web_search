@@ -4,30 +4,15 @@ from django.conf import settings
 from scantool.tool.cmscan import *
 import scantool.tool.rule
 import pymysql
+from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
+from scantool.models import *
 
 logger = logging.getLogger('scantool.views')
 
 
 
 
-def save_data(search):
-    try:
-        conn = pymysql.connect(host='127.0.0.1', user='root', passwd='521why1314',
-                               db='mysql', charset='utf8', port=3306)
-        conn = conn.cursor()
-        conn.execute('use http_information')
-        conn.execute('SELECT * FROM `httpdata` where CONCAT(`ip`,`title`,`header`) like '+'\'%'+search+'%\'')
-        result = []
-        for i in conn :
-            d = {}
-            d['url'] = i[1]
-            d['title'] = i[2]
-            d['header'] = i[3]
-            result.append(d)
-        return result
-    except:
-        conn.close()
-        return 'none'
+
 
 def webscan(request):
     try:
@@ -41,9 +26,11 @@ def webscan(request):
 
 def search(request):
     try:
-        search = request.POST.get('search')
-        search = search.replace(' ','')
-        result = save_data(search)
+        search = request.GET.get('search')
+        if search :
+            search = search.replace(' ','')
+            result_list = httpdata.objects.filter(ip__contains=search)
+        result_list = getPage(request,result_list)
     except Exception as e:
         print(e)
         logger.error(e)
@@ -51,4 +38,11 @@ def search(request):
 
 
 
-
+def getPage(request, result_list):
+    paginator = Paginator(result_list, 10)
+    try:
+        page = int(request.GET.get('page', 1))
+        result_list = paginator.page(page)
+    except (EmptyPage, InvalidPage, PageNotAnInteger):
+        result_list = paginator.page(1)
+    return result_list
