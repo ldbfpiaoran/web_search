@@ -7,7 +7,7 @@ import pymysql
 '''
 CREATE TABLE httpdata (id BIGINT(7) NOT NULL AUTO_INCREMENT, ip VARCHAR(200),title VARCHAR(10000),header
 VARCHAR(10000), created TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(id));
-
+弃用了 httpdata数据库  改为django自动生成的数据库方法
 '''
 
 
@@ -19,7 +19,7 @@ def save_data(url,title,header):
         conn = conn.cursor()
         conn.execute('use http_information')
 
-        savesql = 'insert into `httpdata` (`ip`,`title`,`header`) values (%s,%s,%s)'
+        savesql = 'insert into `scantool_httpdata` (`ip`,`title`,`header`) values (%s,%s,%s)'
         conn.execute(savesql, (url, title, header))
         conn.connection.commit()
     except:
