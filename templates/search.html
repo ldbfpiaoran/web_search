@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <title>web指纹识别</title>
+    <title>web之眼</title>
 </head>
 <body style="background-image:url({% static 'images/background.png' %})">
 
@@ -13,10 +13,10 @@
 <div id="mainbody">
   <div style="margin-top:180px;">
     <div class="container">
-        <form class="form-inline text-center" action="/search/" method="POST" onsubmit="GetInfo();return false;">
+        <form class="form-inline text-center" action="/search/" method="GET" onsubmit="GetInfo();return false;">
         <div class="form-group">
             {% csrf_token %}
-            <label class="control-label" for="inputurls">search</label>
+            <label class="control-label" for="inputurls" style="color:red;font-size:16px;">search</label>
           <input type="text" class="input-lg form-control" value="" id="search" name="search">
           <button type="submit" class="btn btn-lg btn-danger">搜索</button><br><br>
             </div>
@@ -24,12 +24,28 @@
   <tbody>
 
     <tr bgcolor="#FFFFFF">
-          {%  for i in result %}
-        <p style="color:lawngreen;font-size:16px;">ip :      {{ i.url }}</p><br>
+          {%  for i in result_list %}
+        <p style="color:lawngreen;font-size:16px;">ip :      {{ i.ip }}</p><br>
               <p style="color:greenyellow;font-size:16px;">title :      {{ i.title }}</p><br>
               <p style="color:limegreen;font-size:16px;">header :      {{ i.header }}</p><br>
         {% endfor %}
     </tr>
+  <div id="pagination">
+    <ul id="pagination-flickr">
+    {% csrf_token %}
+    {% if result_list.has_previous %}
+    <li class="previous"><a href="?page={{ result_list.previous_page_number }}&search={{ search }}" style="color:red;font-size:16px;">&laquo;上一页</a></li>
+    {% else %}
+    <li class="previous-off" style="color:red;font-size:16px;">&laquo;上一页</li>
+    {% endif %}
+     <li class="active" style="color:red;font-size:16px;">{{ result_list.number }}/{{ result_list.paginator.num_pages }}</li>
+    {% if result_list.has_next %}
+      <li class="next"><a href="?page={{ result_list.next_page_number }}&search={{ search }}" style="color:red;font-size:16px;">下一页 &raquo;</a></li>
+    {% else %}
+      <li class="next-off" style="color:red;font-size:16px;">下一页 &raquo;</li>
+    {% endif %}
+   </ul>
+</div>
 
   </tbody>
 </body>
